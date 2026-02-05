@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - InteriorHuts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">InteriorHuts</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="consultation-btn" onclick="window.location.href='contact.html'">Book Consultation</button>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+            <p>Discover our collection of luxury interior design projects</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filters -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="villa">Luxury Villas</button>
+                <button class="filter-btn" data-filter="kitchen">Kitchens</button>
+            </div>
+
+            <!-- Featured Projects -->
+            <div class="featured-projects">
+                <div class="project-card" data-category="residential" onclick="openProjectModal('mumbai-residence')">
+                    <div class="project-image residential-project"></div>
+                    <div class="project-info">
+                        <h3>Mumbai Luxury Residence</h3>
+                        <p class="project-location">Bandra, Mumbai</p>
+                        <p class="project-type">Residential • 3500 sq ft</p>
+                        <div class="project-details">
+                            <span class="project-year">2023</span>
+                            <span class="project-budget">₹25 Lakhs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="commercial" onclick="openProjectModal('tech-office')">
+                    <div class="project-image commercial-project"></div>
+                    <div class="project-info">
+                        <h3>Tech Startup Office</h3>
+                        <p class="project-location">Gurgaon, Delhi</p>
+                        <p class="project-type">Commercial • 5000 sq ft</p>
+                        <div class="project-details">
+                            <span class="project-year">2023</span>
+                            <span class="project-budget">₹35 Lakhs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="villa" onclick="openProjectModal('goa-villa')">
+                    <div class="project-image villa-project"></div>
+                    <div class="project-info">
+                        <h3>Beachfront Villa</h3>
+                        <p class="project-location">North Goa</p>
+                        <p class="project-type">Villa • 6000 sq ft</p>
+                        <div class="project-details">
+                            <span class="project-year">2022</span>
+                            <span class="project-budget">₹45 Lakhs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="kitchen" onclick="openProjectModal('modern-kitchen')">
+                    <div class="project-image kitchen-project"></div>
+                    <div class="project-info">
+                        <h3>Modern Modular Kitchen</h3>
+                        <p class="project-location">Bangalore</p>
+                        <p class="project-type">Kitchen • 400 sq ft</p>
+                        <div class="project-details">
+                            <span class="project-year">2023</span>
+                            <span class="project-budget">₹8 Lakhs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="residential" onclick="openProjectModal('penthouse')">
+                    <div class="project-image penthouse-project"></div>
+                    <div class="project-info">
+                        <h3>Luxury Penthouse</h3>
+                        <p class="project-location">Worli, Mumbai</p>
+                        <p class="project-type">Residential • 4500 sq ft</p>
+                        <div class="project-details">
+                            <span class="project-year">2022</span>
+                            <span class="project-budget">₹55 Lakhs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="commercial" onclick="openProjectModal('boutique')">
+                    <div class="project-image boutique-project"></div>
+                    <div class="project-info">
+                        <h3>Designer Boutique</h3>
+                        <p class="project-location">Khan Market, Delhi</p>
+                        <p class="project-type">Retail • 1200 sq ft</p>
+                        <div class="project-details">
+                            <span class="project-year">2023</span>
+                            <span class="project-budget">₹18 Lakhs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="before-after">
+        <div class="container">
+            <h2 class="section-title">Before & After Transformations</h2>
+            <div class="transformation-slider">
+                <div class="transformation-item">
+                    <div class="before-after-container">
+                        <div class="before-image"></div>
+                        <div class="after-image"></div>
+                        <div class="slider-handle"></div>
+                    </div>
+                    <h3>Living Room Transformation</h3>
+                    <p>From outdated to luxury modern living space</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content project-modal">
+            <span class="close">&times;</span>
+            <div id="modalContent">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>InteriorHuts</h3>
+                    <p>Crafting Luxury Spaces</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Pinterest</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; InteriorHuts – Crafting Luxury Spaces</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="enhanced-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - InteriorHuts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">InteriorHuts</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="consultation-btn active-btn">Book Consultation</button>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Ready to transform your space? Let's discuss your dream project</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="contact-options">
+        <div class="container">
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>+91 98765 43210</p>
+                    <button class="method-btn" onclick="window.open('tel:+919876543210')">Call Now</button>
+                </div>
+                <div class="contact-method">
+                    <div class="method-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Quick responses & project updates</p>
+                    <button class="method-btn" onclick="window.open('https://wa.me/919876543210')">Chat Now</button>
+                </div>
+                <div class="contact-method">
+                    <div class="method-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>hello@interiorhuts.com</p>
+                    <button class="method-btn" onclick="window.open('mailto:hello@interiorhuts.com')">Send Email</button>
+                </div>
+                <div class="contact-method">
+                    <div class="method-icon">📅</div>
+                    <h3>Book Meeting</h3>
+                    <p>Schedule a consultation</p>
+                    <button class="method-btn" onclick="openBookingModal()">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Form -->
+    <section class="main-contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-section">
+                    <h2>Start Your Project</h2>
+                    <form id="mainContactForm" class="premium-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="firstName" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="lastName" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select name="projectType" required>
+                                <option value="">Select Project Type</option>
+                                <option value="residential">Residential Interior</option>
+                                <option value="commercial">Commercial Design</option>
+                                <option value="kitchen">Modular Kitchen</option>
+                                <option value="furniture">Furniture & Lighting</option>
+                                <option value="turnkey">Turnkey Project</option>
+                                <option value="consultation">Design Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <select name="budget" required>
+                                    <option value="">Budget Range</option>
+                                    <option value="3-5">₹3-5 Lakhs</option>
+                                    <option value="5-10">₹5-10 Lakhs</option>
+                                    <option value="10-25">₹10-25 Lakhs</option>
+                                    <option value="25-50">₹25-50 Lakhs</option>
+                                    <option value="50+">₹50+ Lakhs</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="timeline" required>
+                                    <option value="">Project Timeline</option>
+                                    <option value="immediate">Immediate (1-2 months)</option>
+                                    <option value="soon">Soon (3-6 months)</option>
+                                    <option value="planning">Planning (6+ months)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="location" placeholder="Project Location (City)" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="requirements" placeholder="Tell us about your project requirements, style preferences, and any specific needs..." rows="5" required></textarea>
+                        </div>
+                        <div class="form-group file-upload">
+                            <label for="projectFiles">Upload Reference Images (Optional)</label>
+                            <input type="file" id="projectFiles" name="projectFiles" multiple accept="image/*">
+                            <div class="file-info">Max 5 files, 10MB each</div>
+                        </div>
+                        <button type="submit" class="btn-primary submit-btn">Submit Project Inquiry</button>
+                    </form>
+                </div>
+                <div class="contact-info-section">
+                    <div class="office-info">
+                        <h3>Our Offices</h3>
+                        <div class="office">
+                            <h4>Mumbai (Head Office)</h4>
+                            <p>123 Design Street, Bandra West<br>Mumbai - 400050</p>
+                        </div>
+                        <div class="office">
+                            <h4>Delhi</h4>
+                            <p>456 Luxury Lane, Gurgaon<br>Delhi NCR - 122001</p>
+                        </div>
+                        <div class="office">
+                            <h4>Bangalore</h4>
+                            <p>789 Innovation Hub, Koramangala<br>Bangalore - 560034</p>
+                        </div>
+                    </div>
+                    <div class="working-hours">
+                        <h3>Working Hours</h3>
+                        <div class="hours">
+                            <p><strong>Monday - Friday:</strong> 9:00 AM - 7:00 PM</p>
+                            <p><strong>Saturday:</strong> 10:00 AM - 5:00 PM</p>
+                            <p><strong>Sunday:</strong> By Appointment Only</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content booking-modal">
+            <span class="close">&times;</span>
+            <h2>Book a Consultation</h2>
+            <div class="booking-form">
+                <div class="calendar-section">
+                    <h3>Select Date & Time</h3>
+                    <div class="calendar-widget">
+                        <div class="calendar-header">
+                            <button id="prevMonth">&lt;</button>
+                            <span id="currentMonth">December 2024</span>
+                            <button id="nextMonth">&gt;</button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Calendar will be generated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="time-slots">
+                        <h4>Available Time Slots</h4>
+                        <div class="time-grid">
+                            <button class="time-slot" data-time="10:00">10:00 AM</button>
+                            <button class="time-slot" data-time="11:30">11:30 AM</button>
+                            <button class="time-slot" data-time="14:00">2:00 PM</button>
+                            <button class="time-slot" data-time="15:30">3:30 PM</button>
+                            <button class="time-slot" data-time="17:00">5:00 PM</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-details">
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="consultationType" required>
+                                <option value="">Consultation Type</option>
+                                <option value="in-person">In-Person Visit</option>
+                                <option value="virtual">Virtual Meeting</option>
+                                <option value="site-visit">Site Visit</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="notes" placeholder="Any specific requirements or questions?" rows="3"></textarea>
+                        </div>
+                        <div class="selected-slot">
+                            <strong>Selected:</strong> <span id="selectedDateTime">Please select date and time</span>
+                        </div>
+                        <button type="submit" class="btn-primary">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">✅</div>
+            <h2>Thank You!</h2>
+            <p>Your inquiry has been submitted successfully. Our team will contact you within 24 hours.</p>
+            <button class="btn-primary" onclick="closeModal('successModal')">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>InteriorHuts</h3>
+                    <p>Crafting Luxury Spaces</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Pinterest</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; InteriorHuts – Crafting Luxury Spaces</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="enhanced-script.js"></script>
+</body>
+</html>

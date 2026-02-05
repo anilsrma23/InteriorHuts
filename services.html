@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - InteriorHuts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">InteriorHuts</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="consultation-btn" onclick="window.location.href='contact.html'">Book Consultation</button>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Our Premium Services</h1>
+            <p>Comprehensive design solutions tailored to your luxury lifestyle</p>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="detailed-services">
+        <div class="container">
+            <div class="service-detail">
+                <div class="service-content">
+                    <div class="service-text">
+                        <h2>Residential Interiors</h2>
+                        <p>Transform your home into a luxury sanctuary with our bespoke residential design services. We specialize in creating personalized spaces that reflect your lifestyle while maintaining timeless elegance.</p>
+                        <ul class="service-features">
+                            <li>Complete home makeovers</li>
+                            <li>Room-specific designs</li>
+                            <li>Luxury bedroom suites</li>
+                            <li>Living room transformations</li>
+                            <li>Premium material selection</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price">Starting from ₹8 Lakhs</span>
+                            <button class="service-btn" onclick="openServiceModal('residential')">Get Quote</button>
+                        </div>
+                    </div>
+                    <div class="service-image residential-img"></div>
+                </div>
+            </div>
+
+            <div class="service-detail reverse">
+                <div class="service-content">
+                    <div class="service-text">
+                        <h2>Commercial & Office Design</h2>
+                        <p>Create inspiring workspaces that boost productivity and reflect your brand identity. Our commercial designs blend functionality with sophisticated aesthetics.</p>
+                        <ul class="service-features">
+                            <li>Corporate office design</li>
+                            <li>Retail space planning</li>
+                            <li>Restaurant & hospitality</li>
+                            <li>Co-working spaces</li>
+                            <li>Brand-aligned interiors</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price">Starting from ₹12 Lakhs</span>
+                            <button class="service-btn" onclick="openServiceModal('commercial')">Get Quote</button>
+                        </div>
+                    </div>
+                    <div class="service-image commercial-img"></div>
+                </div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-content">
+                    <div class="service-text">
+                        <h2>Modular Kitchen Design</h2>
+                        <p>Design the heart of your home with our premium modular kitchen solutions. Combining functionality with luxury finishes for the perfect culinary experience.</p>
+                        <ul class="service-features">
+                            <li>Custom cabinet design</li>
+                            <li>Premium appliance integration</li>
+                            <li>Smart storage solutions</li>
+                            <li>Luxury countertops</li>
+                            <li>Lighting design</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price">Starting from ₹3 Lakhs</span>
+                            <button class="service-btn" onclick="openServiceModal('kitchen')">Get Quote</button>
+                        </div>
+                    </div>
+                    <div class="service-image kitchen-img"></div>
+                </div>
+            </div>
+
+            <div class="service-detail reverse">
+                <div class="service-content">
+                    <div class="service-text">
+                        <h2>3D Visualization & Planning</h2>
+                        <p>See your space come to life before construction begins. Our advanced 3D visualization helps you make informed decisions and visualize the final result.</p>
+                        <ul class="service-features">
+                            <li>Photorealistic 3D renders</li>
+                            <li>Virtual walkthroughs</li>
+                            <li>Material visualization</li>
+                            <li>Lighting simulations</li>
+                            <li>Multiple design options</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price">Starting from ₹50,000</span>
+                            <button class="service-btn" onclick="openServiceModal('3d')">Get Quote</button>
+                        </div>
+                    </div>
+                    <div class="service-image visualization-img"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="service-process">
+        <div class="container">
+            <h2 class="section-title">How We Work</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">📞</div>
+                    <h3>Initial Consultation</h3>
+                    <p>Free consultation to understand your needs and vision</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">📐</div>
+                    <h3>Design Proposal</h3>
+                    <p>Detailed proposal with 3D visualizations and cost estimates</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">✅</div>
+                    <h3>Approval & Planning</h3>
+                    <p>Finalize designs and create detailed execution timeline</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🔨</div>
+                    <h3>Execution</h3>
+                    <p>Professional implementation with regular progress updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Service Inquiry</h2>
+            <form id="serviceForm">
+                <input type="hidden" id="serviceType" name="serviceType">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select name="budget" required>
+                        <option value="">Select Budget Range</option>
+                        <option value="3-5">₹3-5 Lakhs</option>
+                        <option value="5-10">₹5-10 Lakhs</option>
+                        <option value="10-25">₹10-25 Lakhs</option>
+                        <option value="25+">₹25+ Lakhs</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="requirements" placeholder="Tell us about your requirements" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Request Quote</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>InteriorHuts</h3>
+                    <p>Crafting Luxury Spaces</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Pinterest</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; InteriorHuts – Crafting Luxury Spaces</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="enhanced-script.js"></script>
+</body>
+</html>

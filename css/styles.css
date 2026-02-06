@@ -1502,15 +1502,30 @@ h1, h2, h3 {
     }
     
     .service-card {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 0 10px;
+    }
+    
+    .service-icon {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
     }
     
     .service-card h3 {
-        font-size: 1.2rem !important;
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem;
     }
     
     .service-card p {
-        font-size: 0.95rem !important;
+        font-size: 0.75rem !important;
+        line-height: 1.4;
     }
     
     .portfolio-filters {

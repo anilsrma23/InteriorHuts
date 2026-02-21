@@ -21,6 +21,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <button class="consultation-btn" onclick="window.location.href='contact.html'">Book Consultation</button>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
         </div>
     </nav>
 
@@ -36,37 +37,64 @@
     <section class="portfolio-section">
         <div class="container">
             <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="residential">Residential</button>
-                <button class="filter-btn" data-filter="commercial">Commercial</button>
-                <button class="filter-btn" data-filter="villa">Luxury Villas</button>
-                <button class="filter-btn" data-filter="kitchen">Kitchens</button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bedroom">Modern</button>
+                <button class="filter-btn" data-filter="bathroom">Luxury</button>
+                <button class="filter-btn" data-filter="kitchen">Premium</button>
+                <button class="filter-btn" data-filter="living">Elegant</button>
+                <button class="filter-btn" data-filter="exterior">Stunning</button>
             </div>
-
-            <!-- Featured Projects -->
             <div class="featured-projects">
-                <div class="project-card" data-category="residential">
-                    <div class="project-image" style="background: url('Work/13.jpeg') center/cover;" onclick="openImageModal('Work/13.jpeg')"></div>
+                <div class="project-card" data-category="bedroom">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0002.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0002.jpg')"></div>
                 </div>
-
-                <div class="project-card" data-category="commercial">
-                    <div class="project-image" style="background: url('Work/14.jpeg') center/cover;" onclick="openImageModal('Work/14.jpeg')"></div>
+                <div class="project-card" data-category="bedroom">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0003.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0003.jpg')"></div>
                 </div>
-
-                <div class="project-card" data-category="villa">
-                    <div class="project-image" style="background: url('Work/15.jpeg') center/cover;" onclick="openImageModal('Work/15.jpeg')"></div>
+                <div class="project-card" data-category="bathroom">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0080.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0080.jpg')"></div>
                 </div>
-
                 <div class="project-card" data-category="kitchen">
-                    <div class="project-image" style="background: url('Work/16.jpeg') center/cover;" onclick="openImageModal('Work/16.jpeg')"></div>
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0010.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0010.jpg')"></div>
                 </div>
-
-                <div class="project-card" data-category="residential">
-                    <div class="project-image" style="background: url('Work/17.jpeg') center/cover;" onclick="openImageModal('Work/17.jpeg')"></div>
+                <div class="project-card" data-category="living">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0014.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0014.jpg')"></div>
                 </div>
-
-                <div class="project-card" data-category="residential">
+                <div class="project-card" data-category="exterior">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0095.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0095.jpg')"></div>
+                </div>
+                <div class="project-card" data-category="bedroom">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0053.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0053.jpg')"></div>
+                </div>
+                <div class="project-card" data-category="bathroom">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0084.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0084.jpg')"></div>
+                </div>
+                <div class="project-card" data-category="kitchen">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0073.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0073.jpg')"></div>
+                </div>
+                <div class="project-card" data-category="living">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0080.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0080.jpg')"></div>
+                </div>
+                <div class="project-card" data-category="exterior">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0100.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0100.jpg')"></div>
+                </div>
+                <div class="project-card" data-category="bedroom">
+                    <div class="project-image" style="background: url('3d view/IMG-20260221-WA0062.jpg') center/cover;" onclick="openImageModal('3d view/IMG-20260221-WA0062.jpg')"></div>
+                </div>
+                <div class="project-card" data-category="bedroom">
                     <div class="project-image" style="background: url('Work/1.jpeg') center/cover;" onclick="openImageModal('Work/1.jpeg')"></div>
+                </div>
+                <div class="project-card" data-category="living">
+                    <div class="project-image" style="background: url('Work/2.jpeg') center/cover;" onclick="openImageModal('Work/2.jpeg')"></div>
+                </div>
+                <div class="project-card" data-category="exterior">
+                    <div class="project-image" style="background: url('Work/3.jpeg') center/cover;" onclick="openImageModal('Work/3.jpeg')"></div>
+                </div>
+                <div class="project-card" data-category="kitchen">
+                    <div class="project-image" style="background: url('Work/4.jpeg') center/cover;" onclick="openImageModal('Work/4.jpeg')"></div>
+                </div>
+                <div class="project-card" data-category="exterior">
+                    <div class="project-image" style="background: url('Work/5.jpeg') center/cover;" onclick="openImageModal('Work/5.jpeg')"></div>
                 </div>
             </div>
         </div>

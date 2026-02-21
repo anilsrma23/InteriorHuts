@@ -430,6 +430,16 @@ window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
 
 
+// Load More Visualization Function
+function loadMoreViz() {
+    const moreSection = document.getElementById('moreVizCategories');
+    const loadBtn = document.getElementById('loadMoreBtn');
+    if (moreSection && loadBtn) {
+        moreSection.style.display = 'block';
+        loadBtn.style.display = 'none';
+    }
+}
+
 // Image Modal Functions
 function openImageModal(imageSrc) {
     const modal = document.getElementById('imageModal');
@@ -439,6 +449,11 @@ function openImageModal(imageSrc) {
         modal.style.display = 'block';
         modalImg.src = imageSrc;
     }
+}
+
+// PDF Viewer Function
+function openPDF(pdfPath) {
+    window.open(pdfPath, '_blank');
 }
 
 // Close modal when clicking X or outside image

@@ -20,6 +20,7 @@
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
         </div>
     </nav>
 
@@ -105,63 +106,114 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <!-- 3D Visualization Gallery -->
+    <section class="visualization-gallery">
         <div class="container">
-            <h2 class="section-title">Our Work</h2>
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="home">Home</button>
-                <button class="filter-btn" data-filter="office">Office</button>
-                <button class="filter-btn" data-filter="villa">Luxury Villas</button>
-                <button class="filter-btn" data-filter="retail">Retail</button>
+            <h2 class="section-title">3D Visualizations</h2>
+            <p class="section-subtitle">Experience your space before it's built</p>
+            
+            <div class="viz-category">
+                <h3 class="viz-category-title">🛏️ Modern</h3>
+                <div class="viz-grid">
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0002.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0002.jpg') center/cover;"></div></div>
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0003.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0003.jpg') center/cover;"></div></div>
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0004.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0004.jpg') center/cover;"></div></div>
+                </div>
             </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="home">
-                    <div class="portfolio-image" style="background: url('Work/1.jpeg') center/cover;" onclick="openImageModal('Work/1.jpeg')"></div>
+            
+            <div class="viz-category">
+                <h3 class="viz-category-title">🛁 Luxury</h3>
+                <div class="viz-grid">
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0080.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0080.jpg') center/cover;"></div></div>
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0084.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0084.jpg') center/cover;"></div></div>
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0085.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0085.jpg') center/cover;"></div></div>
                 </div>
-                <div class="portfolio-item" data-category="home">
-                    <div class="portfolio-image"        style="background: url('Work/2.jpeg') center/cover;" onclick="openImageModal('Work/2.jpeg')"></div>
+            </div>
+            
+            <div class="viz-category">
+                <h3 class="viz-category-title">🍳 Premium</h3>
+                <div class="viz-grid">
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0010.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0010.jpg') center/cover;"></div></div>
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0011.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0011.jpg') center/cover;"></div></div>
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0012.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0012.jpg') center/cover;"></div></div>
                 </div>
-                <div class="portfolio-item" data-category="office">
-                    <div class="portfolio-image" style="background: url('Work/3.jpeg') center/cover;" onclick="openImageModal('Work/3.jpeg')"></div>
+            </div>
+            
+            <div class="viz-category">
+                <h3 class="viz-category-title">🛋️ Elegant</h3>
+                <div class="viz-grid">
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0014.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0014.jpg') center/cover;"></div></div>
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0045.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0045.jpg') center/cover;"></div></div>
+                    <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0049.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0049.jpg') center/cover;"></div></div>
                 </div>
-                <div class="portfolio-item" data-category="home">
-                    <div class="portfolio-image" style="background: url('Work/4.jpeg') center/cover;" onclick="openImageModal('Work/4.jpeg')"></div>
+            </div>
+            
+            <div id="moreVizCategories" style="display: none;">
+                <div class="viz-category">
+                    <h3 class="viz-category-title">🏠 Stunning</h3>
+                    <div class="viz-grid">
+                        <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0100.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0100.jpg') center/cover;"></div></div>
+                        <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0102.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0102.jpg') center/cover;"></div></div>
+                        <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0103.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0103.jpg') center/cover;"></div></div>
+                    </div>
                 </div>
-                <div class="portfolio-item" data-category="villa">
-                    <div class="portfolio-image" style="background: url('Work/5.jpeg') center/cover;" onclick="openImageModal('Work/5.jpeg')"></div>
+                
+                <div class="viz-category">
+                    <h3 class="viz-category-title">✨ More Designs</h3>
+                    <div class="viz-grid">
+                        <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0053.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0053.jpg') center/cover;"></div></div>
+                        <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0062.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0062.jpg') center/cover;"></div></div>
+                        <div class="viz-item" onclick="openImageModal('3d view/IMG-20260221-WA0073.jpg')"><div class="viz-img" style="background: url('3d view/IMG-20260221-WA0073.jpg') center/cover;"></div></div>
+                    </div>
                 </div>
-                <div class="portfolio-item" data-category="home">
-                    <div class="portfolio-image" style="background: url('Work/6.jpeg') center/cover;" onclick="openImageModal('Work/6.jpeg')"></div>
-                </div>
-                <div class="portfolio-item" data-category="retail">
-                    <div class="portfolio-image" style="background: url('Work/7.jpeg') center/cover;" onclick="openImageModal('Work/7.jpeg')"></div>
-                </div>
-                <div class="portfolio-item" data-category="office">
-                    <div class="portfolio-image" style="background: url('Work/8.jpeg') center/cover;" onclick="openImageModal('Work/8.jpeg')"></div>
-                </div>
-                <div class="portfolio-item" data-category="home">
-                    <div class="portfolio-image" style="background: url('Work/9.jpeg') center/cover;" onclick="openImageModal('Work/9.jpeg')"></div>
-                </div>
-                <div class="portfolio-item" data-category="villa">
-                    <div class="portfolio-image" style="background: url('Work/10.jpeg') center/cover;" onclick="openImageModal('Work/10.jpeg')"></div>
-                </div>
-                <div class="portfolio-item" data-category="home">
-                    <div class="portfolio-image" style="background: url('Work/11.jpeg') center/cover;" onclick="openImageModal('Work/11.jpeg')"></div>
-                </div>
-                <div class="portfolio-item" data-category="office">
-                    <div class="portfolio-image" style="background: url('Work/12.jpeg') center/cover;" onclick="openImageModal('Work/12.jpeg')"></div>
-                </div>
+            </div>
+            
+            <div class="view-all-btn-container">
+                <button class="btn-secondary" id="loadMoreBtn" onclick="loadMoreViz()">Load More Designs</button>
+                <button class="btn-primary" onclick="window.location.href='3d-gallery.html'">View All 3D Designs</button>
             </div>
         </div>
     </section>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="image-modal">
-        <span class="close-modal">&times;</span>
-        <img class="modal-image" id="modalImg">
-    </div>
+    <!-- 3D Plans & Blueprints -->
+    <section class="plans-section">
+        <div class="container">
+            <h2 class="section-title">Architectural Plans</h2>
+            <p class="section-subtitle">Professional blueprints and floor plans</p>
+            <div class="plans-grid">
+                <div class="plan-card" onclick="openPDF('3d structure/1BHK Plan.pdf')">
+                    <div class="plan-icon">📐</div>
+                    <h3>1BHK Plan</h3>
+                    <p>Complete floor layout</p>
+                </div>
+                <div class="plan-card" onclick="openPDF('3d structure/2 Bhk Plan.pdf')">
+                    <div class="plan-icon">📐</div>
+                    <h3>2BHK Plan</h3>
+                    <p>Detailed floor design</p>
+                </div>
+                <div class="plan-card" onclick="openPDF('3d structure/Kitchen Plan.pdf')">
+                    <div class="plan-icon">🍳</div>
+                    <h3>Kitchen Plan</h3>
+                    <p>Modular kitchen layout</p>
+                </div>
+                <div class="plan-card" onclick="openPDF('3d structure/Kitchen Elevation A.pdf')">
+                    <div class="plan-icon">🍳</div>
+                    <h3>Kitchen Elevation</h3>
+                    <p>3D kitchen views</p>
+                </div>
+                <div class="plan-card" onclick="openPDF('3d structure/Ground Floor.pdf')">
+                    <div class="plan-icon">🏠</div>
+                    <h3>Ground Floor</h3>
+                    <p>Ground level design</p>
+                </div>
+                <div class="plan-card" onclick="openPDF('3d structure/First Floor.pdf')">
+                    <div class="plan-icon">🏠</div>
+                    <h3>First Floor</h3>
+                    <p>Upper level layout</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Design Process Section -->
     <section class="process">
@@ -245,15 +297,15 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <h3>Call Us</h3>
-                        <p>+91 98765 43210</p>
+                        <p>+91 8826888461</p>
                     </div>
                     <div class="contact-item">
                         <h3>Email</h3>
-                        <p>hello@interiorhuts.com</p>
+                        <p>anils2362@gmail.com</p>
                     </div>
                     <div class="contact-item">
                         <h3>Office</h3>
-                        <p>Mumbai, Delhi, Bangalore</p>
+                        <p>Sadh Nagar, New Delhi 110045</p>
                     </div>
                 </div>
             </div>

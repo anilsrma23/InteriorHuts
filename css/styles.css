@@ -1691,6 +1691,145 @@ h1, h2, h3 {
     }
 }
 
+/* Mobile Premium Enhancements */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+    
+    .hero-content {
+        animation: fadeInUp 1s ease;
+    }
+    
+    .service-card {
+        animation: slideInUp 0.6s ease;
+        animation-fill-mode: both;
+    }
+    
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.2s; }
+    .service-card:nth-child(3) { animation-delay: 0.3s; }
+    .service-card:nth-child(4) { animation-delay: 0.4s; }
+    .service-card:nth-child(5) { animation-delay: 0.5s; }
+    .service-card:nth-child(6) { animation-delay: 0.6s; }
+    
+    .viz-item,
+    .plan-card,
+    .process-step {
+        animation: fadeInScale 0.5s ease;
+        animation-fill-mode: both;
+    }
+    
+    .stat {
+        animation: bounceIn 0.8s ease;
+        animation-fill-mode: both;
+    }
+    
+    .stat:nth-child(1) { animation-delay: 0.2s; }
+    .stat:nth-child(2) { animation-delay: 0.4s; }
+    .stat:nth-child(3) { animation-delay: 0.6s; }
+    
+    .leader-card {
+        animation: slideInUp 0.7s ease;
+        animation-fill-mode: both;
+    }
+    
+    .leader-card:nth-child(1) { animation-delay: 0.1s; }
+    .leader-card:nth-child(2) { animation-delay: 0.3s; }
+    .leader-card:nth-child(3) { animation-delay: 0.5s; }
+    
+    .btn-primary,
+    .btn-secondary {
+        transform: scale(1);
+        transition: transform 0.2s ease;
+    }
+    
+    .btn-primary:active,
+    .btn-secondary:active {
+        transform: scale(0.95);
+    }
+    
+    .portfolio-item,
+    .project-card,
+    .gallery-item {
+        animation: fadeInScale 0.5s ease;
+        animation-fill-mode: both;
+    }
+    
+    .testimonial-card {
+        animation: slideInUp 0.6s ease;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile Navigation Enhancement */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        background: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(10px);
+    }
+    
+    .nav-menu.active {
+        animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .section-title {
+        animation: fadeInUp 0.8s ease;
+    }
+    
+    .viz-category-title {
+        animation: fadeInLeft 0.6s ease;
+    }
+    
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
 /* Team Leadership Cards */
 .team-leadership {
     display: grid;
@@ -2297,6 +2436,155 @@ body {
     color: #ccc;
 }
 
+/* Feedback Page Styles */
+.feedback-hero {
+    padding: 10rem 0 6rem;
+    background: #111;
+    text-align: center;
+}
+
+.feedback-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.feedback-hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* 3D Visualization Gallery */
+.visualization-gallery {
+    padding: 8rem 0;
+    background: #111;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+}
+
+.viz-category {
+    margin-bottom: 4rem;
+}
+
+.viz-category-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: left;
+}
+
+.viz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.viz-item {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    transition: transform 0.3s ease;
+}
+
+.viz-item:hover {
+    transform: translateY(-10px);
+}
+
+.viz-img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.viz-item:hover .viz-img {
+    transform: scale(1.1);
+}
+
+.view-all-btn-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Plans Section */
+.plans-section {
+    padding: 8rem 0;
+    background: #000;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.plan-card {
+    background: #111;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    border-color: #fff;
+    background: #1a1a1a;
+}
+
+.plan-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.plan-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.plan-card p {
+    color: #ccc;
+}
+
+/* Full Gallery Page */
+.full-gallery {
+    padding: 6rem 0;
+    background: #000;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    cursor: pointer;
+    overflow: hidden;
+    height: 280px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.1);
+}
+
 .testimonials-section {
     padding: 8rem 0;
     background: #000;
@@ -2335,6 +2623,17 @@ body {
 .testimonials-grid .testimonial-card:nth-child(10) { animation-delay: 1s; }
 
 @media (max-width: 768px) {
+    .viz-grid,
+    .plans-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .viz-item,
+    .gallery-item {
+        height: 250px;
+    }
+    
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
